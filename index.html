@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indoor Plants</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Indoor Plants</h1>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search plants..." />
+      </div>
+    </nav>
+
+    <section class="hero">
+      <!-- Video background -->
+      <video autoplay muted loop class="video-bg">
+        <source src="video/plants.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="content">
+        <h2>Welcome to the World of Indoor Plants</h2>
+        <p>Explore a variety of plants that bring nature into your home.</p>
+        <a href="shop.html" class="shop-now">Shop Now</a>
+      </div>
+    </section>
+
+    <!-- product section -->
+    <!-- Products Section -->
+    <section class="products">
+      <h2>Our Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/plant1.png" alt="Plant 1" />
+          <h3>Succulent Plant</h3>
+          <p>₹150.99</p>
+        </div>
+        <div class="product-card">
+          <img src="images/plant2.jpg" alt="Plant 2" />
+          <h3>Aloe Vera</h3>
+          <p>₹120.99</p>
+        </div>
+        <div class="product-card">
+          <img src="images/plant3.png" alt="Plant 3" />
+          <h3>Snake Plant</h3>
+          <p>₹180.99</p>
+        </div>
+        <div class="product-card">
+          <img src="images/plant4.png" alt="Plant 4" />
+          <h3>Peace Lily</h3>
+          <p>₹200.99</p>
+        </div>
+      </div>
+    </section>
+    <!--------------------- footer --------------------------->
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <p class="mb-0">© 2024 Mubarra Shaikh. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

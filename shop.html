@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Indoor Plants</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+     <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none;"><h1>Indoor Plants</h1></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search plants..." />
+      </div>
+    </nav>
+
+    <!-- Shop Page Content -->
+    <section class="shop-hero">
+      <h2>Explore Our Plants</h2>
+      <p>Find the perfect plants for your indoor space.</p>
+    </section>
+
+    <section class="shop-container">
+      <!-- Filter and Sorting -->
+      <div class="shop-filters">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="default">Default</option>
+          <option value="price-low-high">Price: Low to High</option>
+          <option value="price-high-low">Price: High to Low</option>
+          <option value="name-asc">Name: A-Z</option>
+          <option value="name-desc">Name: Z-A</option>
+        </select>
+
+        <div class="categories">
+          <button data-filter="all">All</button>
+          <button data-filter="succulent">Succulents</button>
+          <button data-filter="cactus">Cacti</button>
+          <button data-filter="flowering">Flowering</button>
+          <button data-filter="ferns">Ferns</button>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid">
+        <div class="product-card" data-category="succulent">
+          <img src="images/plant1.jpg" alt="Succulent Plant" />
+          <h3>Succulent Plant</h3>
+          <p>₹150.99</p>
+        </div>
+        <div class="product-card" data-category="cactus">
+          <img src="images/plant2.jpg" alt="Aloe Vera" />
+          <h3>Aloe Vera</h3>
+          <p>₹120.99</p>
+        </div>
+        <div class="product-card" data-category="flowering">
+          <img src="images/plant3.png" alt="Snake Plant" />
+          <h3>Snake Plant</h3>
+          <p>₹108.99</p>
+        </div>
+        <div class="product-card" data-category="ferns">
+          <img src="images/plant4.png" alt="Peace Lily" />
+          <h3>Peace Lily</h3>
+          <p>₹200.99</p>
+        </div>
+        <div class="product-card" data-category="cactus">
+          <img src="images/plant5.jpg" alt="Cactus Plant" />
+          <h3>Cactus Plant</h3>
+          <p>₹160.99</p>
+        </div>
+        <div class="product-card" data-category="ferns">
+          <img src="images/plant6.jfif" alt="Boston Fern" />
+          <h3>Boston Fern</h3>
+          <p>₹140.99</p>
+        </div>
+        <div class="product-card" data-category="ferns">
+          <img src="images/plant6.jpg" alt="Boston Fern" />
+          <h3>Green Aglaonema</h3>
+          <p>₹147.99</p>
+        </div>
+        <div class="product-card" data-category="ferns">
+          <img src="images/plant7.jpg" alt="Boston Fern" />
+          <h3>Money Plant</h3>
+          <p>₹147.99</p>
+        </div>
+        <!-- Add more product cards as needed -->
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,536 @@
+/* Reset body and box model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #14a344;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo h1 {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* hamburger */
+/* Hamburger Icon for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+  transition: 0.3s;
+}
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  /* Hide nav-links on smaller screens */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* right: 0; */
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Display hamburger menu icon on mobile */
+  .hamburger {
+    display: flex;
+  }
+}
+
+.search-container {
+  position: relative;
+}
+
+#search-bar {
+  padding: 8px;
+  width: 150px;
+  border: none;
+  border-radius: 20px;
+  transition: width 0.4s ease-in-out;
+}
+
+#search-bar:focus {
+  width: 250px;
+  outline: none;
+}
+
+/* Hero Section with Video Background */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Send the video to the back */
+}
+
+.hero .content {
+  position: relative;
+  text-align: center;
+  color: white;
+  background: hidden;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 1; /* Make sure content stays above video */
+}
+
+.hero h2 {
+  font-size: 5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.shop-now {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  padding: 20px 40px 20px 40px;
+  color: white;
+  border: none;
+  border-radius: 1px 100px 1px 100px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.shop-now:hover {
+  background-color: #2ecc71;
+}
+
+/* Products Section */
+.products {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 1.2em;
+  color: #27ae60;
+}
+
+/* Zoom Effect on Hover */
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  /* height: 2px; */
+  font-size: larger;
+  padding: 20px 20px 20px 20px;
+}
+
+/* Pulsating effect for footer text */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+footer p {
+  animation: pulse 2s infinite;
+}
+
+/* Common styling for the navbar, search, etc. remains unchanged */
+
+/* About Us Page Styles */
+
+/* Hero section */
+.about-hero {
+  height: 80vh;
+  background: url("images/about-background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-hero h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  font-size: 1.2em;
+}
+
+/* About Content Section */
+.about-content {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.mission {
+  margin-bottom: 50px;
+}
+
+.mission h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.mission p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Team Section */
+.team h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.team-member h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1.1em;
+  color: #27ae60;
+}
+
+/* Hover effect on team members */
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation for fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Shop Page Styles */
+
+/* Hero section */
+.shop-hero {
+  height: 80vh;
+  background: url("images/shop-background.jfif") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: darkgreen;
+  text-align: center;
+  padding: 20px;
+}
+
+.shop-hero h2 {
+  font-size: 5em;
+  margin-bottom: 10px;
+}
+
+.shop-hero p {
+  font-size: 1.2em;
+}
+
+/* Shop Container */
+.shop-container {
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+/* Filter Section */
+.shop-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.shop-filters select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.categories {
+  display: flex;
+  gap: 10px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  /* border-radius: 5px; */
+  border-radius: 1px 100px 1px 100px;
+}
+
+/* Contact Us Page */
+
+/* Hero Section */
+.contact-hero {
+  height: 80vh;
+  background: url("images/contact-background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-hero h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 1.2em;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f9f9f9;
+}
+
+.contact-details {
+  flex: 1;
+  padding: 20px;
+}
+
+.contact-details h3 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-form h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #27ae60;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2ecc71;
+}
+
+/* Map Section */
+.map-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.map-placeholder {
+  height: 300px;
+  width: 100%;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Fade-in Animation for elements */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
